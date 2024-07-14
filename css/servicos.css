@@ -1,16 +1,23 @@
+/*imagens e descicao */ 
 .bg-servicos{
 background-color: #F0F0F6; 
+min-height: 700px;
 }
 .servicopossuem{
  display: flex;
  flex-direction: row;
 }
+/*imagens*/ 
+.servicos-img{
+  margin-top: 40px;
+}
 .servicos-img li{
 list-style: none;
-padding: 10px;
+padding: 5px;
+margin-left: 40px;
 }
 .servicos-img ul li img[src$=".webp"]{
-  display: block;
+display: block;
 width: 180px;
 height: 180px;
 border-radius: 8px;
@@ -20,17 +27,22 @@ box-shadow: 0px 5px 5px black;
   cursor: pointer;
   transform: scale(1.1);
 }
+/*descicao */ 
 .servicos-descicao{
 font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 font-weight:500; 
-font-size: 1.5rem;
+font-size: 2rem;
 width: 800px;
-margin-left: 80px;
-margin-top: 40px;
+margin-left: 100px;
+margin-top: 120px;
+text-align: justify;
+color: var(--cor1);
 }
-.content {
+/* ocultar a descricao das imagens */
+.js .content {
   display: none;
 }
+/* ativar a descricao das imagens e fazer animacao */
 .content.ativo {
   display: block !important; 
   animation: show .5s forwards;

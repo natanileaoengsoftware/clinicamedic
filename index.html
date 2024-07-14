@@ -11,19 +11,31 @@
   <link rel="stylesheet" type="text/css" href="/css/style.css">
   <title>Clínica Medic</title>
 </head>
-
+ 
 <body>  
   <header>
     <div class="topo">
-      <img src="/img/logo.png" alt="logo">
-      <ul class="menus">
-        <li><a href="#consultas">Consultas</a></li>
-        <li><a href="#atuacao">Área de Atuação</a></li>
-        <li><a href="#somos">Quem Somos</a></li>
+      <img class="logo" src="/img/logo.png" alt="logo">
+      <ul class="menus js-menu">
+        <li><a href="#consultas">Marcar Consulta</a></li>
+        <li><a href="#servicos">Serviços Oferecidos</a></li>
         <li><a href="#contato">Contato</a></li>
+        <li><a href="#faq">Dúvidas</a></li>
       </ul>
     </div>
   </header>
+  <section class="bg-inicio">
+   <div class="inicio">
+<h1>Amor no Atendimento, Sorrisos na Vida</h1>
+<h3>Sua Saúde merece atenção</h3>
+<div class="agendar">
+<p>Bem estar começa com uma consulta
+  diferenciada e focada em você.</p>
+  <p class="agende">Agende já Sua Consulta!</p>
+</div>
+<button class="botao-consulta"><a href="/">Marcar Consulta</a></button>
+</div>
+  </section>
     <section class="bg-servicos">
       <h1>Nossos Serviços Possuem</h1>
       <div class="servicopossuem">
@@ -44,7 +56,11 @@
         </div>
       </div>
     </section>
-    <section>
+    <section class="bg-servicosoferecidos" id="servicos">
+<h1>Serviços Oferecidos</h1>
+<button class="botao-consulta"><a href="/">Marcar Consulta</a></button>
+    </section>
+    <section class="bg-marcar" id="consultas">
       <div class="form-container">
           <h2>Marcar Consulta</h2>
           <form id="appointment-form">
@@ -58,9 +74,12 @@
           </form>
       </div>
   </section>
-  <section>
+  <section class="bg-contato" id="contato">
+
+  </section>
+  <section class="bg-faq" id="faq" >
     <h1>Dúvidas</h1>
-    <dl>
+    <dl class="faq-lista js-accordion">
    <dt>Como faço para agendar uma consulta?</dt>
       <dd>Temos aqui no site uma seção para agendar consultas, você escolhe o dia disponível e que seja melhor para você</dd>
    
@@ -69,8 +88,8 @@
     <dt>Quais documentos devo levar na minha primeira consulta?</dt>
     <dd>Para realizar o cadastro, deves levar identidade, exames anteriores e se tiver carteirinha do plano de saúde </dd>
     <dt>Aceita Plano de Saúde?</dt>
-    <dd>Sim, temos uma seção aqui no site/ especificando quais aceitamos</dd>
-  </dd>
+    <dd>Sim, na seção serviços oferecidos está especificando quais aceitamos</dd>
+  </dl>
   </section>
   <script type="module" src="/js/script.js"></script>
 

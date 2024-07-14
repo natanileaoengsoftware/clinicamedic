@@ -1,0 +1,26 @@
+body{
+  margin: 0px;
+  scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;  
+  font-family: 'OpenSans', Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+h1, h3, p, ul{
+  margin: 0px;
+  padding: 0px;
+}
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+:root{
+  --cor1:#2555FF;
+  --cor2:#F0F0F6;
+  --cor3:#9DB2FF;
+  --cor4:#00000;
+  --cor5:#9DD6FF;
+  --cor6:#031F82;
+}
