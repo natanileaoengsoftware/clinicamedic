@@ -32,22 +32,40 @@ function initAccordion() {
 }
 initAccordion();
 
-function initScrollSuave(){
-const LinksInternos = document.querySelectorAll('.js-menu a[href^="#"]');
+function initScrollSuave() {
+  const LinksInternos = document.querySelectorAll('.js-menu a[href^="#"]');
 
-function scrollToSection(event) {
-  event.preventDefault();
-  const href = event.currentTarget.getAttribute("href");
-  const section = document.querySelector("href");
-  const topo = section.offsetTop;
-  section.scrollIntoView({
-    behavior:'smooth',
-    block:'start'
+  function scrollToSection(event) {
+    event.preventDefault();
+    const href = event.currentTarget.getAttribute("href");
+    const section = document.querySelector("href");
+    const topo = section.offsetTop;
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+  LinksInternos.forEach((link) => {
+    // para acessar cada link interno
+    link.addEventListener("click, scrollToSection"); //fazer o scroll diretamente na secao do link
   });
 }
-LinksInternos.forEach((link) => {
-  // para acessar cada link interno
-  link.addEventListener("click, scrollToSection"); //fazer o scroll diretamente na secao do link
-});
+initScrollSuave();
+
+function initAnimacaoScroll() {
+  const sections = document.queryselectorAll(".js-scroll");
+  if (sections.length) {
+    const windowMetade = window.innerHeight * 0.6;
+    function animaScroll() {
+      sections.forEach((section) => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const isSectionVisible = sectionTop - windowMetade < 0;
+        if (isSectionVisible) section.classList.add("ativo");
+        else section.classList.remove("ativo");
+      });
+    }
+    animaScroll();
+    window.addEventListener("scroll", animaScroll);
+  }
 }
-initScrollSuave()
+initAnimacaoScroll();
